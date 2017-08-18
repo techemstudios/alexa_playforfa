@@ -4,24 +4,16 @@
       "intent": "AMAZON.HelpIntent"
     },
     {
-      "intent": "Financial"
+      "intent": "About"
     },
     {
-      "intent": "Insurance"
+      "intent": "Stories"
     },
     {
-      "intent": "Auto"
+      "intent": "Donate"
     },
     {
-      "intent": "Time"
-    },
-    {
-      "intent": "Food"
-    },
-    {
-      "intent": "Household"
+      "intent": "Contact"
     }
-
-	
   ]
 }
