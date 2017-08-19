@@ -1,49 +1,9 @@
 """
-<<<<<<< HEAD
-Simple Python Lambda service that uses a simplified my_py.py file to provide simple
-responses to simple "fact"-like intents. The example my_py.py with this repo supports
-the following:
-
-Intents supported:
-
-  Custom:
-    About
-    Contact
-    Upcoming
-
-  Required:
-    LaunchRequest (request type that calls launch function in my_py)
-    AMAZON.HelpIntent (intent that calls help function in my_py)
-    AMAZON.CancelIntent or AMAZON.StopIntent (intent, both use end function in my_py)
-
-Note, that as long as you keep your intents in sync with your skill intentSchema, you can
-simply update or add intents as functions to the my_py.py and the lambda service will use them.
-Intents in your Schema may be mixed case -- this code will convert to lower case.
-
-Furthermore, using this template will make it easier to make an external API call or DB call
-to form the response. If you want to stick to simply updating text, you can try out the S3
-branch where you can update the responses in a JSON file (no code).
-
-Further note, there is .travis.yml in this repo that does two things:
-  1) Deploys this code to your configured lambda function.
-  2) Deploys the ../responses/response.json to your bucket.
-
-If you fork this repo or create your own copy and keep it as a public repo, you can use
-Travis to deploy to your lambda. You'll want to change the following configs:
-
-  in deploy-provider: lambda
-    function_name
-    role
-    access_key_id (available from AWS console)
-    secret_access_key (also available from AWS console, but make sure you use travis command
-    line to encrypt your key)
-=======
 Simple Python Lambda service that uses response.json file in an S3 bucket to provide simple
 responses to simple "fact"-like intents. The example response.json with this repo supports
 the following:
 
 Intents supported:
->>>>>>> wray/s3
 
   Custom:
     About
@@ -146,21 +106,12 @@ def on_intent(intent_request, session):
     intent_name = intent_request['intent']['name']
 
     # Dispatch to your skill's intent handlers
-<<<<<<< HEAD
-    session_attributes = {} # No session attributes needed for simple fact response
-    reprompt_text = None # No reprompt text set
-    speech_output = ""
-    should_end_session = True # Can end session after fact is returned (no additional dialogue)
-
-    if intent_name == "launch":
-=======
     session_attributes = {} # No session attributes needed for simple fact responses
     reprompt_text = None # No reprompt text set
     speech_output = "<ssml>Unable to parse provided response file</ssml>"
     should_end_session = True # Can end session after fact is returned (no additional dialogue)
 
     if intent_name == 'launch':
->>>>>>> wray/s3
         should_end_session = False # Opening a skill requires the session remain open
     elif intent_name == "AMAZON.HelpIntent":
         should_end_session = False # Asking for help requires the session remain open
@@ -170,11 +121,6 @@ def on_intent(intent_request, session):
     else:
         intent_name = intent_name.lower()
 
-<<<<<<< HEAD
-    # Grab the response specified for the given intent of the JSON by calling
-    # the function defined in my_py
-    speech_output = getattr(my_py,intent_name)()
-=======
     # Grab the response specified for the given intent in the JSON
     # The JSON may contain multiple responses for a single intent, further keyed
     # by some passed in parameter
@@ -188,7 +134,6 @@ def on_intent(intent_request, session):
             pass
     else:
         speech_output = responses[intent_name]
->>>>>>> wray/s3
 
     return build_response(session_attributes, build_speechlet_response
                           (intent_name,speech_output,reprompt_text,should_end_session))
@@ -218,11 +163,7 @@ def lambda_handler(event, context):
     #     raise ValueError("Invalid Application ID")
 
     # I am injecting a new "intent" type of launch in order to
-<<<<<<< HEAD
-    # allow my_py to provide the response text for a LaunchRequest
-=======
     # allow the JSON to provide the response text for a LaunchRequest
->>>>>>> wray/s3
     if event['request']['type'] == "LaunchRequest":
         event['request']['intent'] = { 'name':'launch' }
     
