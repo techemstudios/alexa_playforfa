@@ -41,7 +41,7 @@ Travis to deploy to your lambda/S3. You'll want to change the following configs:
 """
 
 # If you want to use a different bucket name or response JSON file, change them here
-BUCKET_NAME='alexa-python-biz'
+BUCKET_NAME='alexa-python-playforfa'
 RESPONSE_JSON='response.json'
 
 import logging
