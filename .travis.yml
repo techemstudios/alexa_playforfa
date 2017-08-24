@@ -23,7 +23,7 @@ deploy:
     local-dir: responses
     skip_cleanup: true
     on:
-      branch: s3
+      branch: master
     access_key_id: AKIAJVL7HOWIC6CIKFSA
     secret_access_key:
       secure: BoVNiwdzrjoKyRX7Ae6DjrezzSTUcXM/pC/0ZILxmHEmAP09Nh/9VGhDoBkml3H+wDVuZO/hyFyZiaq+JUy0JcS9jm/wBxkzccU4eeoQwb6UmZvCs9zgDma9jSrbWlLVJzvd9mWyrJUIKT+zj2a8k965oHuffBWa3gprLyo912YZTqBGzBEV9IEKC7TGfPfMbHcICEwN8l9xB+tya4Qeen+7nRLh77q/1OH3iv4w1j6wClE4d3eqWqpt+xugQtpPSJOdsSVnT6Jmv46X+YNVbKc3/e3ZBVQvTqor/Tl/GUe1EkFyoS5oabVymxj0uLR1vSN8A1z6AWGVYMjBRVTEbRDFb1ETRnPwsn0JIRdWcqmrjPout+b7hQP1jh3xxKHW8szG8HMqKDRKGzzLWSZVq9PslStHXWVIPo2kA783pT//7mvPLYPfXYCHH8fsmONIlQBvkFceOWQruLWZHRksHLuWYnLK0zCc9lS6Co2D+h/8ClM/ojAyyZ0R6vRM+3bUm97tV0dN9Mmu5yBhGQTxKwtQFPoC+VmJUuIJvFYl5BH7FUOBVvFB4s9yRNYvQ64Ad8pZgFEK8LcYwND2LivtsR5HXU/JxBZKY5xTGL0MNYzdkl9D6VS3QkBkIayeYHqJooRrCVBXaRTogYVyRqO41P1Ip0SkZcxevxoX2h516mc=
