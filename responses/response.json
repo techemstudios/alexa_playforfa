@@ -13,7 +13,7 @@
 
     "launch": "<speak>Welcome to Play for F A. You can learn more about Fanconi Anemia and the RVA Organization created to research a cure for this disease. Say About to hear what Fanconi Anemia is.</speak>",
 
-    "help": "<speak>Welcome to PLay for F A. To Learn more, say About. To hear the stories of three Richmonders with F A, say Stories. For Contact info, say Contact. And for the address for dontations, say Donate.</speak>",
+    "help": "<speak>Welcome to PLay for F A. To Learn more, say, About. To hear the stories of three Richmonders with F A, say either, 'Tell me the Sean story', or, 'Tell me the Alex and Jacqueline story'. For Contact info, say Contact. And to hear the address for dontations, say, Donate.</speak>",
 
     "end": "<speak>Thank you and have a nice day!</speak>"
 

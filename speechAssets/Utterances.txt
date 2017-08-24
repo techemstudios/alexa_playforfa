@@ -1,8 +1,8 @@
 About About
 About Info
 About Information
-Stories about {stories_slot}
-Stories {stories_slot} story
+Stories tell me the {stories_slot} story
+Stories the story about {stories_slot}
 Donate Donate
 Donate Contribute
 Donate How to Give
