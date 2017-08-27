@@ -102,11 +102,13 @@ def on_intent(intent_request, session):
     logger.info("on_intent requestId=" + intent_request['requestId'] +
                 ", sessionId=" + session['sessionId'])
 
+    intent_name = 'bad_intent'
+    
     try:
         intent = intent_request['intent']
         intent_name = intent_request['intent']['name']
     except:
-        intent_name == 'bad_intent'
+        pass
     
 
     # Dispatch to your skill's intent handlers
