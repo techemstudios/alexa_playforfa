@@ -131,7 +131,8 @@ def on_intent(intent_request, session):
             intent_slot = intent['slots'][intent_name+'_slot']['value'].lower()
             speech_output = intent_resp[intent_slot]
         except:
-            pass
+            should_end_session = False
+            speech_output = responses['bad_slot']
     else:
         speech_output = responses[intent_name]
 
