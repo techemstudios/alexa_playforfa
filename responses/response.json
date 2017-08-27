@@ -15,7 +15,7 @@
 
     "help": "<speak>Welcome to PLay for FA. To Learn more, say, More Info. To hear the stories of three Richmonders with FA, say either, 'Tell me the Sean story', or, 'Tell me the Siblings story'. For Contact info, say Contact. And to hear the address for dontations, say, Donate.</speak>",
 
-    "bad_slot":"<speak>Sorry, we don't have that story. Say either, 'Tell me the Sean story', or, 'Tell me the Siblings story.'",
+    "bad_slot":"<speak>Sorry, we don't have that story. Say either, 'Tell me the Sean story', or, 'Tell me the Siblings story.'</speak>",
     
     "bad_intent":"<speak>Sorry, we don't support that request. Say help to hear some skill options.</speak>",
     
