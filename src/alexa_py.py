@@ -120,7 +120,7 @@ def on_intent(intent_request, session):
     elif intent_name == "AMAZON.HelpIntent":
         should_end_session = False # Asking for help requires the session remain open
         intent_name = 'help'
-    elif intent_name == 'bad_intent'
+    elif intent_name == 'bad_intent':
         should_end_session = False
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
         intent_name = 'end'
