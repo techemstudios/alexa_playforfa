@@ -102,8 +102,12 @@ def on_intent(intent_request, session):
     logger.info("on_intent requestId=" + intent_request['requestId'] +
                 ", sessionId=" + session['sessionId'])
 
-    intent = intent_request['intent']
-    intent_name = intent_request['intent']['name']
+    try:
+        intent = intent_request['intent']
+        intent_name = intent_request['intent']['name']
+    except:
+        intent_name == 'bad_intent'
+    
 
     # Dispatch to your skill's intent handlers
     session_attributes = {} # No session attributes needed for simple fact responses
@@ -116,6 +120,8 @@ def on_intent(intent_request, session):
     elif intent_name == "AMAZON.HelpIntent":
         should_end_session = False # Asking for help requires the session remain open
         intent_name = 'help'
+    elif intent_name == 'bad_intent'
+        should_end_session = False
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
         intent_name = 'end'
     else:
